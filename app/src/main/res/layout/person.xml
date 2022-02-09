@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ic_launcher_background">
+
+    <Button
+        android:id="@+id/startPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickStartButton"
+        android:text="@string/startPlay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.952" />
+
+    <ImageView
+        android:id="@+id/person"
+        android:layout_width="156dp"
+        android:layout_height="141dp"
+        app:layout_constraintBottom_toBottomOf="@+id/suit"
+        app:layout_constraintEnd_toEndOf="@+id/suit"
+        app:layout_constraintStart_toStartOf="@+id/suit"
+        app:layout_constraintTop_toTopOf="@+id/suit"
+        app:layout_constraintVertical_bias="0.02"
+        app:srcCompat="@drawable/dima" />
+
+    <ImageView
+        android:id="@+id/suit"
+        android:layout_width="0dp"
+        android:layout_height="457dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/suit_anim" />
+
+    <ImageView
+        android:id="@+id/shirt"
+        android:layout_width="0dp"
+        android:layout_height="457dp"
+        app:layout_constraintBottom_toBottomOf="@+id/suit"
+        app:layout_constraintEnd_toEndOf="@+id/suit"
+        app:layout_constraintStart_toStartOf="@+id/suit"
+        app:layout_constraintTop_toTopOf="@+id/suit"
+        app:srcCompat="@drawable/shirt_anim" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickNextPerson"
+        app:layout_constraintBottom_toBottomOf="@+id/person"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toEndOf="@+id/person"
+        app:layout_constraintTop_toTopOf="@+id/person"
+        app:srcCompat="@drawable/ic_baseline_arrow_right_24" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="184dp"
+        android:onClick="onClickNextColor"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:srcCompat="@drawable/ic_baseline_arrow_right_24" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickPrevPerson"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+        app:layout_constraintEnd_toStartOf="@+id/person"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageButton"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_arrow_left_24" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickPrevColor"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_baseline_arrow_left_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
